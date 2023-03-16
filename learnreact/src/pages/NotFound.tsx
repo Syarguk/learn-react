@@ -1,15 +1,12 @@
-function NotFound() {
-  return (
-    <div className="App">
-      <h1>Page not found</h1>
-      <div className="card">
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-    </div>
-  );
-}
+import React from 'react';
 
+class NotFound extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <h1>Page not found</h1>
+      </div>
+    );
+  }
+}
 export default NotFound;

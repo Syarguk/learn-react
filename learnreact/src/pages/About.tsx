@@ -1,15 +1,13 @@
-function About() {
-  return (
-    <div className="App">
-      <h1>About</h1>
-      <div className="card">
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+import React from 'react';
+
+class About extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <h1>About</h1>
       </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-    </div>
-  );
+    );
+  }
 }
 
 export default About;

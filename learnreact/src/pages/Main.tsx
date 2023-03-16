@@ -1,20 +1,30 @@
-import { useState } from 'react';
+import { products } from '../data/data';
+import React from 'react';
+import '../styles/main.css';
+import '../styles/card.css';
 
-function Main() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <div className="App">
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+class Main extends React.Component {
+  render() {
+    return (
+      <div className="main">
+        <div className="search-wrap">
+          <input className="search" type="text" />
+        </div>
+        <div className="cards-wrap">
+          {products.map((item, index) => {
+            return (
+              <div className="card" key={index}>
+                <div className="title">{item.title}</div>
+                <div className="image">
+                  <img src={item.thumbnail} alt={item.title} />
+                </div>
+                <div className="price">{item.price}</div>
+              </div>
+            );
+          })}
+        </div>
       </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-    </div>
-  );
+    );
+  }
 }
-
 export default Main;

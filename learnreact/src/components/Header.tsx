@@ -1,17 +1,18 @@
 import { Link } from 'react-router-dom';
+import '../styles/header.css';
 
 function Header() {
   return (
-    <div className="App">
+    <div className="header">
       <ul>
         <li>
           <Link to="/">
-            <a>main</a>
+            <span>main</span>
           </Link>
         </li>
         <li>
           <Link to="/about">
-            <a>about</a>
+            <span>about</span>
           </Link>
         </li>
       </ul>
