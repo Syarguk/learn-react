@@ -4,6 +4,7 @@
 .cards-wrap {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 10px 10px;
     padding-top: 20px;
 }

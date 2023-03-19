@@ -1,15 +1,16 @@
 import { products } from '../data/data';
 import React from 'react';
+import InputSearch from '../components/InputSerch';
 import '../styles/main.css';
 import '../styles/card.css';
 
 class Main extends React.Component {
+  getStorage = () => localStorage.getItem('inpVal') ?? '';
+
   render() {
     return (
       <div className="main">
-        <div className="search-wrap">
-          <input className="search" type="text" />
-        </div>
+        <InputSearch getstor={this.getStorage()} />
         <div className="cards-wrap">
           {products.map((item, index) => {
             return (

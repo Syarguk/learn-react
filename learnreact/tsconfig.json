@@ -17,7 +17,8 @@
     "isolatedModules": true,
     "baseUrl": "./src",
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "types": ["vitest/globals"]
   },
   "include": ["./src/**/*", "styled.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
