@@ -1,6 +1,6 @@
 import { products } from '../data/data';
 import React from 'react';
-import InputSearch from '../components/InputSerch';
+import InputSearch from 'components/InputSearch';
 import '../styles/main.css';
 import '../styles/card.css';
 
