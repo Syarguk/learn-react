@@ -3,7 +3,7 @@ import React from 'react';
 class About extends React.Component {
   render() {
     return (
-      <div className="App">
+      <div className="App" data-testid="page-about">
         <h1>About</h1>
       </div>
     );

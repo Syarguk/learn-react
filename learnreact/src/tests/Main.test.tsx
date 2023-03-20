@@ -1,15 +1,15 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { MemoryRouter } from 'react-router-dom';
-import Header from '../components/Header';
+import Main from '../pages/Main';
 
-describe('testing Header component', () => {
-  it('link should work correctly', () => {
+describe('testing Main component', () => {
+  it('display the main', () => {
     render(
       <MemoryRouter>
-        <Header />
+        <Main />
       </MemoryRouter>
     );
-    expect(screen.getByRole('header')).toBeInTheDocument();
+    expect(screen.getByTestId('page-main')).toBeInTheDocument();
   });
 });

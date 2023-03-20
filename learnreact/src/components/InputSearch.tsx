@@ -16,7 +16,7 @@ class InputSearch extends React.Component<{ getstor: string }, { curValue: strin
 
   render() {
     return (
-      <div className="search-wrap">
+      <div className="search-wrap" data-testid="search">
         <input
           className="search"
           type="text"

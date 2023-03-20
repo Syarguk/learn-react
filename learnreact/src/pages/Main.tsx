@@ -1,6 +1,6 @@
 import { products } from '../data/data';
 import React from 'react';
-import InputSearch from 'components/InputSearch';
+import InputSearch from '../components/InputSearch';
 import '../styles/main.css';
 import '../styles/card.css';
 
@@ -9,7 +9,7 @@ class Main extends React.Component {
 
   render() {
     return (
-      <div className="main">
+      <div className="main" data-testid="page-main">
         <InputSearch getstor={this.getStorage()} />
         <div className="cards-wrap">
           {products.map((item, index) => {

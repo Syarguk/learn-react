@@ -3,15 +3,15 @@ import '../styles/header.css';
 
 function Header() {
   return (
-    <div className="header">
+    <div className="header" role="header">
       <ul>
         <li>
-          <Link to="/">
+          <Link to="/" data-testid="head-main-link">
             <span>main</span>
           </Link>
         </li>
         <li>
-          <Link to="/about">
+          <Link to="/about" data-testid="head-about-link">
             <span>about</span>
           </Link>
         </li>
