@@ -23,6 +23,15 @@ function Header() {
             <span>about</span>
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            className={({ isActive }) => (isActive ? ' active-link' : '')}
+            to="/form"
+            data-testid="head-about-link"
+          >
+            <span>form</span>
+          </NavLink>
+        </li>
       </ul>
     </div>
   );
