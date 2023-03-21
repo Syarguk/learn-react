@@ -12,3 +12,6 @@ li {
     display: inline-block;
     margin: 0 20px;
 }
+.active-link {
+    border-bottom: #000000 solid 2px;
+}
