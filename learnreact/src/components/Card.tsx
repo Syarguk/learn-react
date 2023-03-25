@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/card.css';
 
 interface CardType {
-  key: number;
+  id: number;
   title: string;
   price: number;
   thumbnail: string;
@@ -10,9 +10,9 @@ interface CardType {
 
 class Card extends React.Component<CardType> {
   render() {
-    const { key, title, thumbnail, price } = this.props;
+    const { id, title, thumbnail, price } = this.props;
     return (
-      <div className="card" key={key}>
+      <div className="card" key={id}>
         <div className="title">{title}</div>
         <div className="image">
           <img src={thumbnail} alt={title} />

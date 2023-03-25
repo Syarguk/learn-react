@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Main from './pages/Main';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
-import Form from './pages/Form';
+import FormPage from './pages/FormPage';
 import './App.css';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
         <Route path="/" element={<Main />} />
         <Route path="/about" element={<About />} />
-        <Route path="/form" element={<Form />} />
+        <Route path="/form" element={<FormPage />} />
       </Routes>
     </>
   );
