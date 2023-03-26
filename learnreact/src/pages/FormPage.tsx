@@ -1,35 +1,42 @@
-import { Component } from 'react';
+// import { Component } from 'react';
+import React from 'react';
 import Form from '../components/Form';
 import ItemFD from '../components/ItemFormData';
+import { CardUserData } from 'types/types';
 import '../styles/formpage.css';
 
-interface FD {
-  name: string;
-  data: string;
-}
-class FormPage extends Component<{ str?: string }, { arrFormData: FD[] }> {
-  constructor(props: { str: string | undefined }) {
+type FS = {
+  users: CardUserData[];
+};
+
+class FormPage extends React.Component<object, FS> {
+  constructor(props: object) {
     super(props);
     this.state = {
-      arrFormData: [],
+      users: [],
     };
   }
 
   getListData() {
-    return this.state.arrFormData.map((item: FD, ind: number) => {
-      return <ItemFD name="fgh" data={item.data} key={ind} />;
+    return this.state.users.map((item: CardUserData, ind: number) => {
+      return (
+        <ItemFD
+          name={item.name}
+          data={item.data}
+          gender={item.gender}
+          promo={item.promo}
+          period={item.period}
+          img={item.img}
+          key={ind}
+        />
+      );
     });
   }
 
-  addUser(name: string, data: string) {
-    const newUser = {
-      name,
-      data,
-    };
-    this.setState(({ arrFormData }) => {
-      const newArr = [...arrFormData, newUser];
-      return newArr;
-    });
+  addUser(user: CardUserData) {
+    this.setState((prSt: FS) => ({
+      users: [...prSt.users, user],
+    }));
   }
 
   render() {
@@ -38,7 +45,7 @@ class FormPage extends Component<{ str?: string }, { arrFormData: FD[] }> {
         <div className="App" data-testid="page-about">
           <h1>Add User</h1>
         </div>
-        <Form onAdd={this.addUser} />
+        <Form onAdd={(user: CardUserData) => this.addUser(user)} />
         {this.getListData()}
       </>
     );
