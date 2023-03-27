@@ -1,4 +1,4 @@
-import { Component, FormEvent, createRef } from 'react';
+import { Component, FormEvent, ChangeEventHandler, createRef } from 'react';
 import { TypePropsForm, CardUserData } from 'types/types';
 
 class Form extends Component<TypePropsForm> {
