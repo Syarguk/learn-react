@@ -1,4 +1,4 @@
-import { Component, FormEvent, ChangeEventHandler, createRef } from 'react';
+import { Component, FormEvent, createRef } from 'react';
 import { TypePropsForm, CardUserData } from 'types/types';
 
 class Form extends Component<TypePropsForm> {
@@ -14,6 +14,7 @@ class Form extends Component<TypePropsForm> {
   period1 = createRef<HTMLInputElement>();
   period2 = createRef<HTMLInputElement>();
   file = createRef<HTMLInputElement>();
+  formRef = createRef<HTMLFormElement>();
 
   createUser() {
     const file = this.file.current?.files?.[0];
@@ -36,10 +37,11 @@ class Form extends Component<TypePropsForm> {
     event.preventDefault();
     const user: CardUserData = this.createUser();
     this.props.onAdd(user);
+    this.formRef.current?.reset();
   }
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} ref={this.formRef}>
         <label>
           <input type="text" ref={this.name} placeholder="Name" />
         </label>
