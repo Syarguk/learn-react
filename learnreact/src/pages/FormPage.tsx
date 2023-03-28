@@ -7,6 +7,7 @@ import '../styles/formpage.css';
 
 type FS = {
   users: CardUserData[];
+  confirmMess: boolean;
 };
 
 class FormPage extends React.Component<object, FS> {
@@ -14,6 +15,7 @@ class FormPage extends React.Component<object, FS> {
     super(props);
     this.state = {
       users: [],
+      confirmMess: false,
     };
   }
 
