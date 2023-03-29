@@ -22,3 +22,8 @@ form > input {
 .wrap-items-fd img {
     width: 100px;
 }
+.wrap-users {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}

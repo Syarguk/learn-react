@@ -5,20 +5,17 @@ import Card from '../components/Card';
 import '../styles/main.css';
 import '../styles/card.css';
 
-class Main extends React.Component {
-  getStorage = () => localStorage.getItem('inpVal') ?? '';
-
-  render() {
-    return (
-      <div className="main" data-testid="page-main">
-        <InputSearch getstor={this.getStorage()} />
-        <div className="cards-wrap">
-          {products.map((item) => {
-            return <Card {...item} key={item.id} />;
-          })}
-        </div>
+function Main() {
+  const getStorage = () => localStorage.getItem('inpVal') ?? '';
+  return (
+    <div className="main" data-testid="page-main">
+      <InputSearch getstor={getStorage} />
+      <div className="cards-wrap">
+        {products.map((item) => {
+          return <Card {...item} key={item.id} />;
+        })}
       </div>
-    );
-  }
+    </div>
+  );
 }
 export default Main;
