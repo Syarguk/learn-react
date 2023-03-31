@@ -27,3 +27,7 @@ form > input {
     flex-wrap: wrap;
     gap: 10px;
 }
+.errors {
+    margin-left: 10px;
+    color: red;
+}
